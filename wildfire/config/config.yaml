@@ -1,0 +1,27 @@
+## config for a star
+  steering_angle_num: 10 # steering angle discrete
+  dt: 0.4 # s used for compute trajectory distance while expanding nodes
+  case_path: Cases # case folder name
+  trajectory_dt: 0.2 # s discrete the trajectory for collision check
+  map_discrete_size: 0.1 # m
+  flag_radius: 18 # m (in this circle area, we use rs curve to connect goal pose)
+  extended_num: 1 # extend point at the end of orignal path
+  vehicle: "truck"
+
+## cost
+  cost_gear: 1
+  cost_heading_change: 0.5
+  cost_scale: 10
+
+## collision check
+  safe_side_dis: 0.15 # m
+  safe_fr_dis: 0.15 # m
+  collision_check: distance # choose a method for collision check: 'circle', 'distance', 
+  draw_collision: False # draw collision position while searching new nodes
+
+
+## save info
+  # save path
+  save_path: ./solution # do not edit
+  # save pictures
+  pic_path: ./pictures
